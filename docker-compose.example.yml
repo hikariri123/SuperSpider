@@ -20,8 +20,8 @@ services:
             NODE_ENV: production
             MONGODB_PASS: admin
             MONGODB_IP: superspider-mongo
-            room_id: 21452505
-            fullmsg_id: 21452505
+            room_id: 437817,21452505
+            fullmsg_id: 437817,21452505
     superspider-mdb:
         image: acedroidx/superspider-mdb:master
         container_name: superspider-mdb
@@ -32,7 +32,7 @@ services:
             NODE_ENV: production
             MONGODB_PASS: admin
             MONGODB_IP: superspider-mongo
-            room_id: 21452505,80397
+            room_id: 437817,21452505
     superspider-mcore:
         image: acedroidx/superspider-mcore:master
         container_name: superspider-mcore
@@ -47,11 +47,11 @@ services:
         ports:
             - "2162:2162"
     superspider-showcase:
-        image: acedroidx/superspider-showcase:master
+        image: hikariri123/superspider-showcase:master
         container_name: superspider-showcase
         environment:
-            BASE_API_URL: https://api.example.com
-            room_id: 21452505,80397
+            BASE_API_URL: http://192.168.6.60:2162
+            room_id: 437817,21452505
         ports:
             - "2164:2164"
 
