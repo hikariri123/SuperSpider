@@ -38,9 +38,10 @@ async function main() {
     }
     amdb.createIndex({ roomid: -1, livets: -1, })
     amdb.createIndex({ roomid: -1, ts: -1, })
+    amdb.dropIndex("id_-1")
     amdb.createIndex({ id: -1, }, { unique: true })
     amdb.createIndex({ ts: -1, })
-    await delay(5000)
+    await delay(55000)
     console.log('RDB STARTED')
     await rdb(amdb)
 }
